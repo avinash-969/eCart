@@ -1,0 +1,23 @@
+[
+ {
+   "productId": 1,
+   "name": "Product-1",
+   "availability": 10,
+   "orderQunatity": 0,
+   "desc": "some description"
+ },
+ {
+   "productId": 2,
+   "name": "Product-2",
+   "availability": 10,
+   "orderQunatity": 0,
+   "desc": "some description"
+ },
+ {
+   "productId": 3,
+   "name": "Product-3",
+   "availability": 10,
+   "orderQunatity": 0,
+   "desc": "some description"
+ }
+]

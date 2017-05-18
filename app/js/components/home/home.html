@@ -1,0 +1,65 @@
+<!-- <h1>This is home page</h1>
+
+<p class="lead">{{model.welcomeMsg}}</p>
+
+<input type="text" name="" ng-model="model.name" value="">
+<button type="button" ng-click="model.changeMsg();" name="button">Change Msg</button> -->
+<div directive-end-fn='model.end(directiveData)' my-custom1>
+</div>
+
+<div ng-if="model.tmp">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+          <!-- <h3 class="display-1">
+          Product Name :  {{model.selectedProduct.name}}
+          Available Count : <br>  {{model.selectedProduct.availability}}
+            <button type="button" ng-model="model.button" class="btn btn-primary" ng-click="model.add()">add to cart</button>
+          </h3> -->
+
+          <table class="table table-inverse">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Available Count</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{model.selectedProduct.name}}</td>
+                <td>{{model.selectedProduct.availability}}</td>
+                <td>{{model.selectedProduct.desc}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" ng-model="model.button" class="btn btn-primary" ng-click="model.add()">add to cart</button>
+          <!-- <button type="button" ng-model="model.button" class="btn btn-primary" ng-click="model.remove($index)">remove from cart</button> -->
+        </div>
+        <div class="col-md-4">
+          <table class="table table-inverse">
+            <!-- <caption>Cart Items</caption> -->
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Remove From Cart</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cart in model.cartItemsList track by $index">
+                  <td>{{cart.name}}</td>
+                  <td>{{cart.desc}}</td>
+                  <td>{{cart.orderQunatity}}</td>
+                  <td><button type="button" ng-model="model.button" class="btn btn-primary" ng-click="model.remove($index)">
+                    <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</div>

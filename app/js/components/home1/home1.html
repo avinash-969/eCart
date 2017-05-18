@@ -1,0 +1,49 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="background-color:lavender;">
+        <center><h1 class="display-1">Employee Details</h1></center>
+    </div>
+  </div>
+</div>
+
+<br><br><center>
+<form class="form-inline">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+<div class="form-group ">
+<label for="name">Employee Name</label>
+<input type="text" class="form-control" id="empname" placeholder="Jane Doe" ng-model="model.emp.empName"><br><br>
+  <button type="button" class="btn btn-primary" ng-click="model.fetch()">Fetch</button><br><br>
+    <div ng-if="model.temp">
+
+      Name : {{model.emp.empName}}
+
+      <div ng-if="model.askDetails">
+        Price : {{model.emp.Price}}
+        Quantity : {{model.emp.Quantity}}
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" ng-model="model.askDetails">
+            Select For Additional Details
+        </label>
+      </div>
+
+
+
+    </div>
+
+      <div ng-if="model.askDetails">
+        <ul>
+          <li ng-repeat="details in model.emp.empDetails">
+            {{details}}
+          </li>
+        </ul>
+      </div>
+</div>
+</div>
+</form>
+</center>

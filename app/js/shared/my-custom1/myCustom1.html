@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+
+      <div class="dropdown">
+
+          <select class="dropdown-item" ng-model="model.selectedProduct" ng-change="model.change()"
+          ng-options="product as (product.name+'-'+product.availability) for product in model.products">
+          </select>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
